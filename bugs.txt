@@ -1,0 +1,40 @@
+1. error logging in. Loggin in with incorrect credentials allows you to view the authenticated map chart component 
+2. Map and chart are still hardcoded. 
+3. Code quality and design 
+
+working in myMap() -> lat and long is passed via props but wont display like it did when i had it hardcoded. 
+- not hardcoded but has bugs. chart and map. maybe just leave for tut. 
+
+
+-------------------
+
+I THINK need use effect on myMap with dependency of ID. so that everytime ID of volcano chnages. the map is re-rendered. 
+fix map first then do chart. 
+
+
+REMAINING FEATURES (mostly needed for a 7.): 
+- css design 
+- Check login details and display as incorrect if server replies not OK 
+- Login error handling: password missing, loggin missing, password or username incorrect (if password incorrect), user does not exist in system. 
+- once user logs in create popup that says successfully logged in and redirect user to the volcanos page 
+- Cannot register new email if the username does not fit email parameters. also require particular password length to sign up 
+- Have element in header/navbar that displays logged in state. eg if(loggedin) ->logout button deactivated and vice versa. if logged in register button is deactivated. 
+            only activated once logged out. (have to log out before registering)
+- Stop dropdown menu from taking up entire screen.
+- Centre grid data. format text data displaying volcano information. 
+- LARGER FEATURE: query /volcanoes?country=Japan&populatedWithin=10km  20km etc feature/api call. add label populatedWithin: then dropdown with the 4 values. then search. 
+            have this search query endpoint based on data in dropdown box. reset the row data based on volcanos that have population within this range. 
+- ensure pagination is working. 
+- would be good for 7 to design an autocomplete text component to the dropdown menu. For instance users can scrolll for country name alphabetically but they can also
+    search and the dropdown automatically sorts entrys based on the user input (leave till later probs) task: "client side filtering and sorted - looked favourably" 
+- Map GPS coordinate point graphic doesnt move when the user scrolls out 
+- userability eg coding for disabled people. 
+- Code quality/refactoring (ask tuts their opinion on what code of mine is bad)
+- put country in dropdown. then set 30km. then change country. Will not show new country with 30km, will only show all volcanos from that country.
+        maybe once popwithin is set this sets a global state variable that impacts the query when country is changed back. 
+
+- website adjusts for screen width. 
+
+Test Case: 
+1. correct endpoints 
+
